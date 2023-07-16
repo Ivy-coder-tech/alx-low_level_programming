@@ -11,10 +11,14 @@ int main(void)
 	while (b <= '9')
 	{
 		putchar(b);
-		b++
+		b++;
 	}
-
+	while (a <= 'a')
+	{
+		putchar(a);
+		a++;
+	}
 	putchar('\n');
 
-	return 0;
+	return (0);
 }
