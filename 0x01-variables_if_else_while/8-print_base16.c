@@ -1,30 +1,20 @@
 #include <stdio.h>
 /**
  * main - Allows us to write our code
- * Return: 0 (Success)
+ * Return: Always 0
  */
-
 int main(void)
 {
-	char h;
+	int a = 'a';
+	int b = '0';
 
-	int a;
+	while (b <= '9')
+	{
+		putchar(b);
+		b++
+	}
 
-	h = 'a';
-	a = '0';
-while
-(a < 10)
-{
-	putchar(a);
-	a++;
-}
-while
-(h <= 'f')
-{
-	putchar(h);
-	h++;
-}
-putchar('\n');
-return (0);
-}
+	putchar('\n');
 
+	return 0;
+}
