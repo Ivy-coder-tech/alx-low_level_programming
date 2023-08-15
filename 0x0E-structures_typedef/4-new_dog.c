@@ -16,15 +16,15 @@ int _strlen(char *str)
 {
 	int len = 0;
 
-	while(*str++)
+	while (*str++)
 		len++;
 
-	return(len);
+	return (len);
 }
 
 /**
- *_strcop - Copies a string pointed by src, including the
-  terminating null byte, to a buffer pointed to by dest.
+ *_strcopy - Copies a string pointed by src, including the
+ *terminating null byte, to a buffer pointed to by dest.
  *@dest: Tthe buffer storing the string copy
  *@src: The source string
  *Return: The pointer to dest
@@ -34,19 +34,19 @@ char *_strcopy(char *dest, char *src)
 {
 	int index = 0;
 
-	for(index = 0; src[index]; index++)
+	for (index = 0; src[index]; index++)
 		dest[index] = src[index];
 
 	dest[index] = '\0';
 
-	return(dest);
+	return (dest);
 }
 
 /**
  *new_dog - creates a new dog
  *@name: The name of the dog
  *@age: The age of the dog
- *Owner: The owner of the dog
+ *@owner: The owner of the dog
  *Return: The new struct dog
  */
 
@@ -58,7 +58,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	doggo = malloc(sizeof(dog_t));
 	if (doggo == NULL)
-		return(NULL);
+		return (NULL);
 
 	doggo->name = malloc(sizeof(char) * (_strlen(name) + 1));
 	if (doggo->name == NULL)
@@ -77,7 +77,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	doggo->name = _strcopy(doggo->name, name);
 	doggo->age = age;
-	doggo->owner = _strcopy(doggo->owner,owner);
+	doggo->owner = _strcopy(doggo->owner, owner);
 
-	return(doggo);
+	return (doggo);
 }
