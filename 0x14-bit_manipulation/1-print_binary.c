@@ -14,26 +14,21 @@
 
 void print_binary(unsigned long int n)
 {
-	if (n == 0)
+	int i, count = 0;
+	unsigned long int current;
+
+	for (i = 63; i >= 0; i--)
 	{
-		return ("0");
-	}
+		current = n >> i;
 
-	int num bits = sizeof (unsigned long int) * 8;
-	unsigned long int mask = 1UL << (num bits - 1);
-
-	int;
-
-	for (int i = 0; i < num bits; i++)
-	{
-		if((n & mask) != 0)
+		if (current & 1)
 		{
-			int;
-			return ("1");
+			_putchar('1');
+			count++;
 		}
-		else if (!'0')
-		{
-			return ("0");
-		}
+		else if (count)
+			_putchar('0');
 	}
+	if (!count)
+		_putchar('0');
 }
